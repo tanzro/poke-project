@@ -1,0 +1,12 @@
+@import "../../../../styles/global-colors.scss";
+
+.div-main {
+    background-color: $mblack;
+
+    .div-pokedex {
+        background-color: $mred;
+        height: 100vh;
+        border: 7px solid $mblack;
+        border-radius: 30px;
+    }
+}

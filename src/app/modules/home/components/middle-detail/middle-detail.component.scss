@@ -1,0 +1,26 @@
+@import '../../../../../styles/global-colors.scss';
+
+.content { 
+    height: 30vh;
+    display: flex;
+    align-items: center;
+
+    .triangle-left {
+        width: 0;
+        height: 0;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        border-left: 100px solid $mblack;
+    
+        .inner-triangle {
+            position: relative;
+            top: -37px;
+            left: -95px;
+            width: 0;
+            height: 0;
+            border-top: 37px solid transparent;
+            border-bottom: 37px solid transparent;
+            border-left: 74px solid $myellow;
+        }
+    }
+}
