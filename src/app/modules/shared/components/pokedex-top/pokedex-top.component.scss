@@ -1,12 +1,12 @@
 @import "../../../../../styles/styles.scss";
 @import "../../../../../styles/global-colors.scss";
 
-$mradius: 300px;
+$mradius: 80%;
 
 .pokedex-top {
     height: 35vh;
     border-bottom: $mborder;
-    width: 50%;
+    width: 100%;
 
     display: flex;
 
@@ -14,7 +14,7 @@ $mradius: 300px;
         height: 100%;
         display: flex;
         align-items: center;
-        margin-left: 20px;
+        margin-left: 50px;
     }
 
     .outer-circle {
@@ -89,6 +89,20 @@ $mradius: 300px;
     @media screen and (min-width: 486px) {
         .div-minis {
             margin-left: 10vh;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .div-lights {
+            margin-left: 10px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .div-minis {
+            display: block;
+            margin-left: 50px;
+            margin-top: 45px;
         }
     }
 }
