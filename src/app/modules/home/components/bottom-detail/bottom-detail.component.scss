@@ -1,5 +1,5 @@
 @import '../../../../../styles/global-colors.scss';
-
+@import '../../../../../styles/styles.scss';
 
 .content {
     height: 20vh;
@@ -10,7 +10,7 @@
     .div-bottom {
         height: 30px;
         width: 60%;
-        border: 7px solid $mblack;
+        border: $mborder;
         border-radius: 30px;
     }
 }

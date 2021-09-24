@@ -1,12 +1,20 @@
+@import "../../../../styles/styles.scss";
 @import "../../../../styles/global-colors.scss";
 
 .div-main {
-    background-color: $mblack;
+    background-image: url(../../../../assets/images/Cartoon_green_texture_grass.jpg);
+    background-size: contain;
+
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 700px;
+    }
 
     .div-pokedex {
         background-color: $mred;
         height: 100vh;
-        border: 7px solid $mblack;
+        border: $mborder;
         border-radius: 30px;
     }
 }
