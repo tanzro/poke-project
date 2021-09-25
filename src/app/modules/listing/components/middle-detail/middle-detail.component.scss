@@ -8,9 +8,9 @@
     .triangle-left {
         width: 0;
         height: 0;
-        border-top: 50px solid transparent;
-        border-bottom: 50px solid transparent;
-        border-left: 100px solid $mblack;
+        border-top: 46px solid transparent;
+        border-bottom: 46px solid transparent;
+        border-left: 99px solid $mblack;
     
         .inner-triangle {
             position: relative;
@@ -20,7 +20,7 @@
             height: 0;
             border-top: 37px solid transparent;
             border-bottom: 37px solid transparent;
-            border-left: 74px solid $myellow;
+            border-left: 81px solid $myellow;
         }
     }
 }

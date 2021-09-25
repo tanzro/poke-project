@@ -1,0 +1,25 @@
+@import "../../../../styles/styles.scss";
+@import "../../../../styles/global-colors.scss";
+
+.div-main {
+    background-color: #a0c110;
+    background-image: url('../../../../assets/images/grass-background.jpg');
+    background-size: contain;
+
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+        max-width: 700px;
+    }
+
+    .div-pokedex {
+        background-color: $mred;
+        height: 100vh;
+        border: $mborder;
+        border-radius: 30px;
+        
+        display: flex;
+        justify-content: space-between;
+  flex-direction: column;
+    }
+}

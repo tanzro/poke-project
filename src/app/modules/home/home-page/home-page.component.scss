@@ -1,20 +1,21 @@
-@import "../../../../styles/styles.scss";
-@import "../../../../styles/global-colors.scss";
+.main-div {
+    height: 100vh;
+    background-image: url("../../../../assets/images/home_screen.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.div-main {
-    background-image: url(../../../../assets/images/Cartoon_green_texture_grass.jpg);
-    background-size: contain;
+    .div-footer {
+        padding-bottom: 30px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-    .container {
-        padding-left: 0px;
-        padding-right: 0px;
-        max-width: 700px;
-    }
-
-    .div-pokedex {
-        background-color: $mred;
-        height: 100vh;
-        border: $mborder;
-        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        font-size: large;
     }
 }
