@@ -1,0 +1,27 @@
+@import '../../../../../styles/styles.scss';
+@import '../../../../../styles/global-colors.scss';
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    button {
+        width: 100%;
+        height: 100%;
+        border: $mborder;
+        border-radius: 30px;
+        background-color: $mlightgrey;
+        color: white;
+        font-size: x-large;
+
+        &:hover {
+            background-color: $mgrey;
+        }
+
+        &:active {
+            background-color: rgb(44, 48, 41);
+        }
+    }
+}

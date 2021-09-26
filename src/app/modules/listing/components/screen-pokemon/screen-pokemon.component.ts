@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'screen-pokemon',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./screen-pokemon.component.scss']
 })
 export class ScreenPokemonComponent implements OnInit {
+
+  @Input() imgUrl: string = '';
 
   constructor() { }
 

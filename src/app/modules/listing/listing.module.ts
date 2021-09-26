@@ -6,6 +6,7 @@ import { PokedexTopComponent } from './components/pokedex-top/pokedex-top.compon
 import { ScreenPokemonComponent } from './components/screen-pokemon/screen-pokemon.component';
 import { SearchPokemonComponent } from './components/search-pokemon/search-pokemon.component';
 import { SharedModule } from '../shared/shared.module';
+import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.component';
 
 
 
@@ -14,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     ListingPageComponent,
     PokedexTopComponent,
     ScreenPokemonComponent,
-    SearchPokemonComponent
+    SearchPokemonComponent,
+    ListPokemonComponent
   ],
   imports: [
     CommonModule,
