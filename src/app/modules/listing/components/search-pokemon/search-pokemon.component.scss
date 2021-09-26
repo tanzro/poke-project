@@ -1,0 +1,28 @@
+@import '../../../../../styles/global-colors.scss';
+@import '../../../../../styles/styles.scss';
+
+.div-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .div-input {
+    width: 80%;
+
+    input {
+      width: 100%;
+      height: 100%;
+      font-size: x-large;
+      padding-left: 15px;
+      border: $mborder;
+      border-radius: 30px;
+    }
+  }
+
+  .div-btn {
+      width: 20%;
+      display: flex;
+      justify-content: flex-end;
+      align-items:flex-end;
+  }
+}
