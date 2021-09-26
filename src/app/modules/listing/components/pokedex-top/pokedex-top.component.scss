@@ -1,0 +1,113 @@
+@import "../../../../../styles/styles.scss";
+@import "../../../../../styles/global-colors.scss";
+
+$mradius: 80%;
+
+.pokedex-top {
+  height: 25vh;
+  border-bottom: $mborder;
+  width: 100%;
+
+  display: flex;
+
+  .div-lights {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  .div-minis {
+    display: flex;
+    height: 100%;
+    margin-top: 45px;
+  }
+
+  .mini-lights {
+    height: 5vh;
+    width: 5vh;
+    border: $mborder;
+    border-radius: $mradius;
+
+    .reflection-mini {
+      background-color: white;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .red-light {
+    background-color: $mred;
+  }
+
+  .yellow-light {
+    background-color: $myellow;
+  }
+
+  .green-light {
+    background-color: $mgreen;
+  }
+}
+
+.div-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Big blue circle
+  .outer-circle {
+    background-color: $mwhite;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: $mborder;
+
+    .inner-circle {
+      background-color: $mblue;
+      width: 15vh;
+      height: 15vh;
+      border-radius: 50%;
+      margin: 0 auto;
+      border: $mborder;
+
+      .reflection-circle {
+        background-color: white;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    .outer-circle {
+      width: 13vh;
+      height: 13vh;
+
+      .inner-circle {
+        width: 10vh;
+        height: 10vh;
+
+        .reflection-circle {
+          width: 3vh;
+          height: 3vh;
+        }
+      }
+    }
+  }
+}
+
+.div-right {
+  background-color: pink;
+  width: 50%;
+  height: 100%;
+}
