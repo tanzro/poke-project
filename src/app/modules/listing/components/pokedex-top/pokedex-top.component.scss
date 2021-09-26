@@ -123,6 +123,11 @@ $mradius: 80%;
     .mini-lights {
       height: 4vh;
       width: 4vh;
+
+      .reflection-mini {
+        width: 1vh;
+        height: 1vh;
+      }
     }
   }
 }
