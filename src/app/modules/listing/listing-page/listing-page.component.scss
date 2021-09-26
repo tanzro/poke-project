@@ -3,13 +3,14 @@
 
 .div-main {
     background-color: #a0c110;
-    background-image: url('../../../../assets/images/grass-background.jpg');
+    background-image: url("../../../../assets/images/grass-background.jpg");
     background-size: contain;
+    padding: 0px 100px;
 
     .container {
         padding-left: 0px;
         padding-right: 0px;
-        max-width: 700px;
+        // max-width: 700px;
     }
 
     .div-pokedex {
@@ -17,9 +18,20 @@
         height: 100vh;
         border: $mborder;
         border-radius: 30px;
-        
+
         display: flex;
         justify-content: space-between;
-  flex-direction: column;
+        flex-direction: column;
+    }
+
+    .padding-0{
+        padding-right:0;
+        padding-left:0;
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .div-main {
+        padding: 0px 30px;
+    }
+  }
