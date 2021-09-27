@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="pokemon-list">
-              <list-pokemon [pokemonList]='pokemonList'></list-pokemon>
+              <list-pokemon [pokemonList]='pokemonList' (onPokemonSelected)="recebeuPokemon($event)"></list-pokemon>
             </div>
           </div>
         </div>

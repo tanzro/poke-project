@@ -2,7 +2,7 @@
   <div class="select-options">
     <ng-container *ngIf="pokemonList">
       <select class="form-select" size="3" aria-label="size 3 select example">
-        <option value={{i.name}} *ngFor="let i of pokemonList">{{i.name}}</option>
+        <option (click)="pickPokemon($event.target)" value={{i.name}} *ngFor="let i of pokemonList">{{i.name}}</option>
       </select>
     </ng-container>
     <div class="loading-infos" *ngIf="!pokemonList">

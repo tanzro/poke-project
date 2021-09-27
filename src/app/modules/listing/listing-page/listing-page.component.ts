@@ -56,4 +56,9 @@ export class ListingPageComponent implements OnInit {
       }
     );
   }
+
+  recebeuPokemon(respostaFilho: string) {
+    this.pokemonToSearch = '';
+    this.getPokemonDetail(respostaFilho);
+  }
 }
