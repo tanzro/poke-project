@@ -7,6 +7,7 @@ import { ScreenPokemonComponent } from './components/screen-pokemon/screen-pokem
 import { SharedModule } from '../shared/shared.module';
 import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.component';
 
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.com
   imports: [
     CommonModule,
     ListingRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class ListingModule { }

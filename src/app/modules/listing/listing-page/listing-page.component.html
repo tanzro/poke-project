@@ -7,20 +7,30 @@
           <pokedex-top></pokedex-top>
           <div class="middle-content">
             <div class="pokemon-screen">
-              <screen-pokemon
-                [imgUrl]="
-                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png'
-                "
-              ></screen-pokemon>
+              <ng-container *ngIf="!pokemonDetails; else noPokemon">
+                <screen-pokemon>
+                </screen-pokemon>
+              </ng-container>
+              <ng-template #noPokemon>
+                <screen-pokemon [imgUrl]="pokemonDetails.sprites.other.dream_world.front_default">
+                </screen-pokemon>
+              </ng-template>
             </div>
             <div class="pokemon-search">
               <div class="content-search">
                 <div class="div-input">
-                  <input type="text" name="" placeholder="Name or id..." />
+                  <input
+                    [(ngModel)]="pokemonToSearch"
+                    type="text"
+                    placeholder="Name or id..."
+                  />
                 </div>
 
                 <div class="div-btn">
-                  <button-pokedex [text]="'OK'"></button-pokedex>
+                  <button-pokedex
+                    [text]="'OK'"
+                    (click)="getPokemonDetail(pokemonToSearch)"
+                  ></button-pokedex>
                 </div>
               </div>
             </div>
