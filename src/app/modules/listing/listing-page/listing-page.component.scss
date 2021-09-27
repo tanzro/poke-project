@@ -2,94 +2,104 @@
 @import "../../../../styles/global-colors.scss";
 
 .div-main {
-    background-color: #a0c110;
-    background-image: url("../../../../assets/images/grass-background.jpg");
-    background-size: contain;
-    padding: 0px 100px;
+  background-color: #a0c110;
+  background-image: url("../../../../assets/images/grass-background.jpg");
+  background-size: contain;
+  padding: 0px 100px;
 
-    .container {
-        padding-left: 0px;
-        padding-right: 0px;
+  .container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .div-pokedex {
+    background-color: $mred;
+    height: 100vh;
+    border: $mborder;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .pokedex-right {
+    height: 75vh;
+  }
+
+  .reverse-column {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .middle-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .pokemon-screen {
+      height: 40%;
+      width: 100%;
     }
 
-    .div-pokedex {
-        background-color: $mred;
-        height: 100vh;
-        border: $mborder;
-        border-radius: 30px;
-
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+    .pokemon-search {
+      height: 10%;
+      width: 100%;
     }
 
-    .pokedex-right {
-        height: 75vh;
+    .pokemon-list {
+      height: 30%;
+      width: 100%;
     }
 
-    .reverse-column {
-        display: flex;
-        flex-direction: column-reverse;
+    .content-search {
+      width: 100%;
+      height: 100%;
+      display: flex;
+
+      .div-input {
+        width: 70%;
+
+        input {
+          width: 100%;
+          height: 100%;
+          font-size: x-large;
+          padding-left: 15px;
+          border: $mborder;
+          border-radius: 30px;
+        }
+      }
+
+      .div-btn {
+        width: 30%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 10px;
+      }
     }
 
-    .padding-0 {
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .middle-content {
+    .pokemon-name {
         width: 100%;
-        height: 100%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        .pokemon-screen {
-            height: 40%;
-            width: 100%;
-        }
-
-        .pokemon-search {
-            height: 10%;
-            width: 100%;
-        }
-
-        .pokemon-list {
-            height: 30%;
-            width: 100%;
-        }
-
-        .content-search {
-            width: 100%;
-            height: 100%;
-            display: flex;
-          
-            .div-input {
-              width: 70%;
-          
-              input {
-                width: 100%;
-                height: 100%;
-                font-size: x-large;
-                padding-left: 15px;
-                border: $mborder;
-                border-radius: 30px;
-              }
-            }
-          
-            .div-btn {
-                width: 30%;
-                justify-content: flex-end;
-                align-items:flex-end;
-                padding-left: 10px;
-            }
-          }
+        height: 10%;
     }
+
+    .ornament {
+        width: 100%;
+        height: 30%;
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .div-main {
-        padding: 0px 30px;
-    }
+  .div-main {
+    padding: 0px 30px;
+  }
 }

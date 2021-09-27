@@ -1,0 +1,14 @@
+@import '../../../../../styles/global-colors.scss';
+@import '../../../../../styles/styles.scss';
+
+.outer-square {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: $mlightgrey;
+    border: $mborder;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

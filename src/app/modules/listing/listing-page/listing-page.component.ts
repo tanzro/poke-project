@@ -8,10 +8,10 @@ import { PokemonListService } from "../services/pokemon-list.service";
   styleUrls: ["./listing-page.component.scss"],
 })
 export class ListingPageComponent implements OnInit {
-  pokemonToSearch: string | number = ""; // Text typed by the user
+  pokemonToSearch: string | number = ""; // Text typed by the user to search pokémon
   pokemonDetails!: PokemonDetail; // Pokemon object return details
   isLoading: boolean = false; // Makes the big blue ball blink when processing
-  errorMessage: boolean = false; 
+  errorMessage: boolean = false; // Warns if it will show the error message or not when fetching pokemon
 
   constructor(private pokemonListService: PokemonListService) {}
 
@@ -42,8 +42,11 @@ export class ListingPageComponent implements OnInit {
   getPokemonDetail(pokemon: number | string) {
     this.isLoading = true;
     this.errorMessage = false;
-    this.pokemonListService.getPokemonDetail(pokemon).subscribe((x) => {
-      (this.pokemonDetails = x), (this.isLoading = false);
-    }, (err) => this.errorMessage = true);
+    this.pokemonListService.getPokemonDetail(pokemon).subscribe(
+      (x) => {
+        (this.pokemonDetails = x), (this.isLoading = false), console.log(x);
+      },
+      (err) => (this.errorMessage = true)
+    );
   }
 }

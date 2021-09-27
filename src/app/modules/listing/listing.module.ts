@@ -8,6 +8,9 @@ import { SharedModule } from '../shared/shared.module';
 import { ListPokemonComponent } from './components/list-pokemon/list-pokemon.component';
 
 import { FormsModule } from '@angular/forms';
+import { NamePokemonComponent } from './components/name-pokemon/name-pokemon.component';
+import { DetailsScreenComponent } from './components/details-screen/details-screen.component';
+import { PokedexOrnamentComponent } from './components/pokedex-ornament/pokedex-ornament.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { FormsModule } from '@angular/forms';
     ListingPageComponent,
     PokedexTopComponent,
     ScreenPokemonComponent,
-    ListPokemonComponent
+    ListPokemonComponent,
+    NamePokemonComponent,
+    DetailsScreenComponent,
+    PokedexOrnamentComponent
   ],
   imports: [
     CommonModule,

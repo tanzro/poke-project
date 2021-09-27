@@ -7,17 +7,19 @@
           <pokedex-top [loading]="isLoading"></pokedex-top>
           <div class="middle-content">
             <div class="pokemon-screen" [ngSwitch]="true">
-              <!-- <ng-container *ngIf="!pokemonDetails; else noPokemon">
-                <screen-pokemon>
-                </screen-pokemon>
-              </ng-container>
-              <ng-template #noPokemon>
-                <screen-pokemon [imgUrl]="pokemonDetails.sprites.other.dream_world.front_default">
-                </screen-pokemon>
-              </ng-template> -->
-              <screen-pokemon *ngIf="!pokemonDetails && !errorMessage"></screen-pokemon>
-              <screen-pokemon *ngIf="pokemonDetails" [imgUrl]="pokemonDetails.sprites.other.dream_world.front_default"></screen-pokemon>
-              <screen-pokemon *ngIf="errorMessage" [txtError]="'Pokémon not found!'"></screen-pokemon>
+              <screen-pokemon
+                *ngIf="!pokemonDetails && !errorMessage"
+              ></screen-pokemon>
+              <screen-pokemon
+                *ngIf="pokemonDetails"
+                [imgUrl]="
+                  pokemonDetails.sprites.other.dream_world.front_default
+                "
+              ></screen-pokemon>
+              <screen-pokemon
+                *ngIf="errorMessage"
+                [txtError]="'Pokémon not found!'"
+              ></screen-pokemon>
             </div>
             <div class="pokemon-search">
               <div class="content-search">
@@ -46,7 +48,19 @@
       </div>
       <!-- Right side -->
       <div class="col-md-6 padding-0 reverse-column">
-        <div class="div-pokedex container pokedex-right"></div>
+        <div class="div-pokedex container pokedex-right">
+          <div class="middle-content">
+            <div class="pokemon-screen">
+              <details-screen></details-screen>
+            </div>
+            <div class="pokemon-name">
+              <name-pokemon></name-pokemon>
+            </div>
+            <div class="ornament">
+              <pokedex-ornament></pokedex-ornament>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
