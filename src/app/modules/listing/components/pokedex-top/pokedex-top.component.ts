@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pokedex-top',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokedex-top.component.scss']
 })
 export class PokedexTopComponent implements OnInit {
+
+  @Input() loading: boolean = false;
 
   constructor() { }
 

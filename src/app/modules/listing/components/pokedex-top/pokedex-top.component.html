@@ -1,10 +1,19 @@
 <div class="pokedex-top">
   <div class="div-left">
-    <div class="outer-circle">
-      <div class="inner-circle">
-        <div class="reflection-circle"></div>
+    <ng-container *ngIf="loading; else normal">
+      <div class="outer-circle">
+        <div class="inner-circle flicker-fast">
+          <div class="reflection-circle"></div>
+        </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-template #normal>
+      <div class="outer-circle">
+        <div class="inner-circle">
+          <div class="reflection-circle"></div>
+        </div>
+      </div>
+    </ng-template>
   </div>
 
   <div class="div-right">

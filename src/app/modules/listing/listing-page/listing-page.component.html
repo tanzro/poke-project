@@ -4,17 +4,20 @@
       <!-- Left side -->
       <div class="col-md-6 padding-0">
         <div class="div-pokedex container">
-          <pokedex-top></pokedex-top>
+          <pokedex-top [loading]="isLoading"></pokedex-top>
           <div class="middle-content">
-            <div class="pokemon-screen">
-              <ng-container *ngIf="!pokemonDetails; else noPokemon">
+            <div class="pokemon-screen" [ngSwitch]="true">
+              <!-- <ng-container *ngIf="!pokemonDetails; else noPokemon">
                 <screen-pokemon>
                 </screen-pokemon>
               </ng-container>
               <ng-template #noPokemon>
                 <screen-pokemon [imgUrl]="pokemonDetails.sprites.other.dream_world.front_default">
                 </screen-pokemon>
-              </ng-template>
+              </ng-template> -->
+              <screen-pokemon *ngIf="!pokemonDetails && !errorMessage"></screen-pokemon>
+              <screen-pokemon *ngIf="pokemonDetails" [imgUrl]="pokemonDetails.sprites.other.dream_world.front_default"></screen-pokemon>
+              <screen-pokemon *ngIf="errorMessage" [txtError]="'Pokémon not found!'"></screen-pokemon>
             </div>
             <div class="pokemon-search">
               <div class="content-search">
@@ -23,6 +26,7 @@
                     [(ngModel)]="pokemonToSearch"
                     type="text"
                     placeholder="Name or id..."
+                    (keypress)="keyPressAlphaNumeric($event)"
                   />
                 </div>
 

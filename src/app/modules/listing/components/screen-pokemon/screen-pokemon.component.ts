@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ScreenPokemonComponent implements OnInit {
 
   @Input() imgUrl: string = '';
+  @Input() txtError: string = '';
 
   constructor() { }
 
