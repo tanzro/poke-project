@@ -1,3 +1,4 @@
+import { CoreModule } from './modules/core/core.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { HomeModule } from './modules/home/home.module';
     AppComponent
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
     HomeModule

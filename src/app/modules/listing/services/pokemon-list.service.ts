@@ -1,12 +1,25 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { PokemonDetail } from "./../models/pokemon-details";
+import { ApiRoutes } from "./../routes/api-routes";
+import { PokemonsList } from "./../models/pokemons-list.model";
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class PokemonListService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
+  getPokemonsList(offset: number, limit: number): Observable<PokemonsList[]> {
+    return this.http.get<PokemonsList[]>(
+      ApiRoutes.Listing.getPokemonsList(offset, limit)
+    );
+  }
 
-  
+  getPokemonDetail(pokemon: number | string): Observable<PokemonDetail> {
+    return this.http.get<PokemonDetail>(
+      ApiRoutes.Listing.getPokemonDetail(pokemon)
+    );
+  }
 }
