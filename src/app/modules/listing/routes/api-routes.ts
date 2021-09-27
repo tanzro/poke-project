@@ -4,8 +4,8 @@ export class ApiRoutes {
 
     static Listing = class {
 
-        static getPokemonsList(offset: number, limit: number) {
-            return `${environment.apiUrl}/?offset=${offset}&limit=${limit}`;
+        static getPokemonsList(limit: number) {
+            return `${environment.apiUrl}/pokemon?limit=${limit}`;
         }
 
         static getPokemonDetail(pokemon: number | string) {

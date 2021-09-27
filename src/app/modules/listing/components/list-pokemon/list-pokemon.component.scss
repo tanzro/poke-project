@@ -2,18 +2,32 @@
 @import "../../../../../styles/global-colors.scss";
 
 .div-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+
+  .select-options {
+    height: 100%;
+    border-radius: 50px;
+
+    select {
+      height: 100%;
+      width: 100%;
+      border: $mborder;
+      text-align: center;
+    }
+  }
+
+  .loading-infos {
+    background-color: $mwhite;
     width: 100%;
     height: 100%;
-    border-radius: 30px;
-
-    .select-options {
-        height: 100%;
-        border-radius: 50px;
-
-        select {
-            height: 100%;
-            width: 100%;
-            border: $mborder;
-        }
-    }
+    border: $mborder;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -1,3 +1,4 @@
+import { PokemonsList, Result } from './../models/pokemons-list.model';
 import { PokemonDescription } from "./../models/pokemon-description.model";
 import { Component, OnInit } from "@angular/core";
 import { PokemonDetail } from "../models/pokemon-details";
@@ -10,17 +11,18 @@ import { PokemonListService } from "../services/pokemon-list.service";
 })
 export class ListingPageComponent implements OnInit {
   pokemonToSearch: string | number = ""; // Text typed by the user to search pokémon
-  pokemonDetails!: PokemonDetail | undefined; // Pokemon object return details
-  pokemonDescription!: PokemonDescription | undefined; // Pokemon object return description
+  pokemonDetails: PokemonDetail | undefined; // Pokemon object return details
+  pokemonDescription: PokemonDescription | undefined; // Pokemon object return description
   isLoading: boolean = false; // Makes the big blue ball blink when processing
   errorMessage: boolean = false; // Warns if it will show the error message or not when fetching pokemon
+  pokemonList: Result[] | undefined; // List of pokemonsq
 
   constructor(private pokemonListService: PokemonListService) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.getPokemonList(100, 200);
+    this.getPokemonList(1200);
   }
 
   // Only AlphaNumeric on input
@@ -35,10 +37,10 @@ export class ListingPageComponent implements OnInit {
     }
   }
 
-  getPokemonList(offset: number, limit: number) {
+  getPokemonList(limit: number) {
     this.pokemonListService
-      .getPokemonsList(offset, limit)
-      .subscribe((x) => console.log(""));
+      .getPokemonsList(limit)
+      .subscribe((x) => this.pokemonList = x.results);
   }
 
   getPokemonDetail(pokemon: number | string) {

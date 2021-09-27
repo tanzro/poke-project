@@ -1,9 +1,11 @@
-export class PokemonsList {
+export interface Result {
     name: string;
     url: string;
+}
 
-    constructor() {
-        this.name = '';
-        this.url = '';
-    }
+export interface PokemonsList {
+    count: number;
+    next: string;
+    previous: string;
+    results: Result[];
 }

@@ -12,9 +12,9 @@ import { PokemonDescription } from "../models/pokemon-description.model";
 export class PokemonListService {
   constructor(private http: HttpClient) {}
 
-  getPokemonsList(offset: number, limit: number): Observable<PokemonsList[]> {
-    return this.http.get<PokemonsList[]>(
-      ApiRoutes.Listing.getPokemonsList(offset, limit)
+  getPokemonsList(limit: number): Observable<PokemonsList> {
+    return this.http.get<PokemonsList>(
+      ApiRoutes.Listing.getPokemonsList(limit)
     );
   }
 
