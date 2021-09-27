@@ -7,10 +7,22 @@
           <pokedex-top></pokedex-top>
           <div class="middle-content">
             <div class="pokemon-screen">
-              <screen-pokemon [imgUrl]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png'"></screen-pokemon>
+              <screen-pokemon
+                [imgUrl]="
+                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png'
+                "
+              ></screen-pokemon>
             </div>
             <div class="pokemon-search">
-              <search-pokemon></search-pokemon>
+              <div class="content-search">
+                <div class="div-input">
+                  <input type="text" name="" placeholder="Name or id..." />
+                </div>
+
+                <div class="div-btn">
+                  <button-pokedex [text]="'OK'"></button-pokedex>
+                </div>
+              </div>
             </div>
             <div class="pokemon-list">
               <list-pokemon></list-pokemon>
