@@ -1,3 +1,19 @@
 <div class="outer-square">
-  
+  <p>
+    ID: <span *ngIf="pokemonDetails">{{ pokemonDetails.id }}</span>
+  </p>
+  <p>
+    Height: <span *ngIf="pokemonDetails">{{ pokemonDetails.height }}"</span>
+  </p>
+  <p>
+    Weight: <span *ngIf="pokemonDetails">{{ pokemonDetails.weight }} lbs.</span>
+  </p>
+  <p>
+    Types:
+    <ng-container *ngIf="pokemonDetails">
+      <ng-container *ngFor="let i of pokemonDetails.types">
+        {{ i.type.name }},
+      </ng-container>
+    </ng-container>
+  </p>
 </div>

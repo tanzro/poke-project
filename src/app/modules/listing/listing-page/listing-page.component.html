@@ -34,10 +34,10 @@
         <div class="div-pokedex container pokedex-right">
           <div class="middle-content">
             <div class="pokemon-screen">
-              <details-screen></details-screen>
+              <details-screen [pokemonDetails]="pokemonDetails"></details-screen>
             </div>
             <div class="pokemon-name">
-              <name-pokemon></name-pokemon>
+              <name-pokemon [pokemonName]="pokemonDetails?.name"></name-pokemon>
             </div>
             <div class="ornament">
               <pokedex-ornament></pokedex-ornament>

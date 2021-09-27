@@ -9,6 +9,21 @@
     border: $mborder;
     border-radius: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    font-size: 2vh;
+    font-weight: bold;
+
+    .top-side {
+        height: 50%;
+        width: 100%;
+        background-color: black;
+    }
+
+    .bottom-side {
+        height: 50%;
+        width: 100%;
+        background-color: pink;
+    }
 }

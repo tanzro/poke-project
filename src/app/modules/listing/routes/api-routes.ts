@@ -11,5 +11,9 @@ export class ApiRoutes {
         static getPokemonDetail(pokemon: number | string) {
             return `${environment.apiUrl}/pokemon/${pokemon}`;
         }
+
+        static getPokemonDescription(pokemonId: number) {
+            return `${environment.apiUrl}/characteristic/${pokemonId}`;
+        }
     }
 }

@@ -8,6 +8,7 @@ export interface PokemonDetail {
   types: Type[];
   stats: Stat[];
   sprites: Sprite;
+  weight: number;
 }
 
 export interface Abilities {

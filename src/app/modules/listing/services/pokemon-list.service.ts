@@ -4,6 +4,7 @@ import { PokemonsList } from "./../models/pokemons-list.model";
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { PokemonDescription } from "../models/pokemon-description.model";
 
 @Injectable({
   providedIn: "root",
@@ -20,6 +21,12 @@ export class PokemonListService {
   getPokemonDetail(pokemon: number | string): Observable<PokemonDetail> {
     return this.http.get<PokemonDetail>(
       ApiRoutes.Listing.getPokemonDetail(pokemon)
+    );
+  }
+
+  getPokemonDescription(pokemonId: number): Observable<PokemonDescription> {
+    return this.http.get<PokemonDescription>(
+      ApiRoutes.Listing.getPokemonDescription(pokemonId)
     );
   }
 }

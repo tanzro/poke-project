@@ -1,3 +1,4 @@
+import { PokemonDescription } from "./../models/pokemon-description.model";
 import { Component, OnInit } from "@angular/core";
 import { PokemonDetail } from "../models/pokemon-details";
 import { PokemonListService } from "../services/pokemon-list.service";
@@ -9,7 +10,8 @@ import { PokemonListService } from "../services/pokemon-list.service";
 })
 export class ListingPageComponent implements OnInit {
   pokemonToSearch: string | number = ""; // Text typed by the user to search pokémon
-  pokemonDetails!: PokemonDetail; // Pokemon object return details
+  pokemonDetails!: PokemonDetail | undefined; // Pokemon object return details
+  pokemonDescription!: PokemonDescription | undefined; // Pokemon object return description
   isLoading: boolean = false; // Makes the big blue ball blink when processing
   errorMessage: boolean = false; // Warns if it will show the error message or not when fetching pokemon
 
@@ -40,15 +42,15 @@ export class ListingPageComponent implements OnInit {
   }
 
   getPokemonDetail(pokemon: number | string) {
+    this.pokemonDetails = undefined;
     this.isLoading = true;
     this.errorMessage = false;
     this.pokemonListService.getPokemonDetail(pokemon).subscribe(
       (x) => {
-        (this.pokemonDetails = x), (this.isLoading = false), console.log(x);
+        (this.pokemonDetails = x), (this.isLoading = false), console.log(x)
       },
       (err) => {
-        this.errorMessage = true,
-        this.isLoading = false;
+        (this.errorMessage = true), (this.isLoading = false);
       }
     );
   }
