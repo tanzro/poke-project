@@ -8,5 +8,5 @@ export class PokemonListService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemonsList(1)
+  
 }

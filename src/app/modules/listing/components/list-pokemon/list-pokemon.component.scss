@@ -6,12 +6,13 @@
     height: 100%;
     border-radius: 30px;
 
-    .form-group {
+    .select-options {
         height: 100%;
         border-radius: 50px;
 
         select {
             height: 100%;
+            width: 100%;
             border: $mborder;
         }
     }
