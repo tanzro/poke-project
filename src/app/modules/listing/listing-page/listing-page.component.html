@@ -7,36 +7,19 @@
           <pokedex-top [loading]="isLoading"></pokedex-top>
           <div class="middle-content">
             <div class="pokemon-screen" [ngSwitch]="true">
-              <screen-pokemon
-                *ngIf="!pokemonDetails && !errorMessage"
-              ></screen-pokemon>
-              <screen-pokemon
-                *ngIf="pokemonDetails"
-                [imgUrl]="
-                  pokemonDetails.sprites.other.dream_world.front_default
-                "
-              ></screen-pokemon>
-              <screen-pokemon
-                *ngIf="errorMessage"
-                [txtError]="'Pokémon not found!'"
-              ></screen-pokemon>
+              <screen-pokemon *ngIf="!pokemonDetails && !errorMessage"></screen-pokemon>
+              <screen-pokemon *ngIf="pokemonDetails && !errorMessage" [imgUrl]=" pokemonDetails.sprites.other.dream_world.front_default"></screen-pokemon>
+              <screen-pokemon *ngIf="errorMessage" [txtError]="'Pokémon not found!'"></screen-pokemon>
             </div>
             <div class="pokemon-search">
               <div class="content-search">
                 <div class="div-input">
-                  <input
-                    [(ngModel)]="pokemonToSearch"
-                    type="text"
-                    placeholder="Name or id..."
-                    (keypress)="keyPressAlphaNumeric($event)"
-                  />
+                  <input [(ngModel)]="pokemonToSearch" type="text" placeholder="Name or id..."
+                    (keypress)="keyPressAlphaNumeric($event)" />
                 </div>
 
                 <div class="div-btn">
-                  <button-pokedex
-                    [text]="'OK'"
-                    (click)="getPokemonDetail(pokemonToSearch)"
-                  ></button-pokedex>
+                  <button-pokedex [text]="'OK'" (click)="getPokemonDetail(pokemonToSearch)"></button-pokedex>
                 </div>
               </div>
             </div>

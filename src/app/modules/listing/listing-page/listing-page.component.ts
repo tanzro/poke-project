@@ -46,7 +46,10 @@ export class ListingPageComponent implements OnInit {
       (x) => {
         (this.pokemonDetails = x), (this.isLoading = false), console.log(x);
       },
-      (err) => (this.errorMessage = true)
+      (err) => {
+        this.errorMessage = true,
+        this.isLoading = false;
+      }
     );
   }
 }
